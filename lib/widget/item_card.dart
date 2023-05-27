@@ -8,6 +8,7 @@ class Itemcard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      physics: BouncingScrollPhysics(),
       padding: EdgeInsets.all(10),
       itemCount: 5,
       scrollDirection: Axis.horizontal,
@@ -16,7 +17,7 @@ class Itemcard extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 130,
+                height: 120,
                 width: 160,
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(
@@ -26,30 +27,36 @@ class Itemcard extends StatelessWidget {
                 child: Image.asset('assets/piza_3.jpg'),
               ),
               const Text(
-                'pepperoni Pizza XL',
-                style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+                'Pepperoni Pizza XL',
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+              ),
+              SizedBox(
+                height: 4,
               ),
               const Text(
                 'Double Beef pepperoni',
                 style: TextStyle(
                     fontSize: 12,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.grey),
+                    fontWeight: FontWeight.w500,
+                    color: Color.fromARGB(255, 194, 194, 194)),
+              ),
+              SizedBox(
+                height: 4,
               ),
               Row(
                 children: const [
                   Text(
                     'price :',
                     style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 13,
                         fontWeight: FontWeight.w400,
                         color: Colors.grey),
                   ),
                   Text(
-                    "99.80",
+                    " 99.80",
                     style: TextStyle(
-                        fontSize: 13,
-                        fontWeight: FontWeight.w600,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w700,
                         color: Color.fromARGB(255, 186, 0, 81)),
                   ),
                 ],

@@ -7,6 +7,7 @@ import 'package:pizza/widget/first_card.dart';
 import 'package:pizza/widget/icons_row.dart';
 import 'package:pizza/widget/open_container.dart';
 import 'package:pizza/widget/secon_card.dart';
+import 'package:pizza/widget/text.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -35,13 +36,16 @@ class HomeScreen extends StatelessWidget {
               height: 430,
               child: Stack(
                 children: [
-                  SizedBox(
-                    height: 180,
-                    width: double.infinity,
-                    child: Image.asset('assets/pizza_2.jpg'),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20, bottom: 10),
+                    child: SizedBox(
+                      height: 170,
+                      width: double.infinity,
+                      child: Image.asset('assets/pizza_2.jpg'),
+                    ),
                   ),
                   Center(
-                    heightFactor: 4,
+                    heightFactor: 2.5,
                     child: Padding(
                       padding: const EdgeInsets.only(right: 4),
                       child: Row(
@@ -82,31 +86,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const CurveContainer(),
                   const ContainerCurve(),
-                  Center(
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 300, left: 20),
-                      child: Column(
-                        children: const [
-                          Text(
-                            "Papa John's",
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(
-                            height: 7,
-                          ),
-                          Text(
-                            "Hamoshava",
-                            style: TextStyle(fontSize: 13, color: Colors.grey),
-                          ),
-                          Text(
-                            "Hagermanit",
-                            style: TextStyle(fontSize: 13, color: Colors.grey),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                  const Textpapajohns(),
                   const IconsRow(),
                 ],
               ),
@@ -132,15 +112,15 @@ class HomeScreen extends StatelessWidget {
 
   Container papaJohnsImg() {
     return Container(
-      width: 160,
-      height: 160,
+      width: 180,
+      height: 180,
       decoration: BoxDecoration(
         color: Colors.white,
         image: const DecorationImage(
           image: AssetImage('assets/pizza_johns.jpg'),
           fit: BoxFit.contain,
         ),
-        borderRadius: const BorderRadius.all(Radius.circular(77)),
+        borderRadius: const BorderRadius.all(Radius.circular(90)),
         border: Border.all(
           color: const Color.fromARGB(255, 186, 0, 81),
           width: 2.5,

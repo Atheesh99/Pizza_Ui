@@ -33,16 +33,19 @@ class ContainerCurve extends StatelessWidget {
               ),
               CircleAvatar(
                 backgroundColor: const Color.fromARGB(255, 186, 0, 81),
-                radius: 29,
+                radius: 30,
                 child: Center(
                   child: Column(
                     children: const [
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         '44',
                         style: TextStyle(
                             fontSize: 24,
                             color: Colors.white,
-                            fontWeight: FontWeight.w700),
+                            fontWeight: FontWeight.w800),
                       ),
                       Text(
                         'Minute',

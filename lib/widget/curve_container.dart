@@ -12,7 +12,7 @@ class CurveContainer extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(right: 280, bottom: 10),
         child: Container(
-          margin: EdgeInsets.only(top: 180),
+          margin: EdgeInsets.only(top: 190),
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(
               bottomRight: Radius.circular(35),
@@ -27,7 +27,7 @@ class CurveContainer extends StatelessWidget {
           child: Column(
             children: const [
               Center(
-                heightFactor: 1.5,
+                heightFactor: 1.3,
                 child: Text(
                   "  Delivery\n charge to\nyour current",
                   style: TextStyle(fontSize: 10),
@@ -35,14 +35,14 @@ class CurveContainer extends StatelessWidget {
               ),
               CircleAvatar(
                 backgroundColor: Color.fromARGB(255, 227, 227, 227),
-                radius: 28,
+                radius: 30,
                 child: Center(
                   child: Text(
                     '36',
                     style: TextStyle(
                         fontSize: 24,
                         color: Colors.black,
-                        fontWeight: FontWeight.w700),
+                        fontWeight: FontWeight.w900),
                   ),
                 ),
               ),
